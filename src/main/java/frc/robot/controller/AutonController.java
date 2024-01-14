@@ -23,7 +23,10 @@ public class AutonController {
 
         SequentialCommandGroup commandGroup = new SequentialCommandGroup();
 
-        
+         //move forward
+         commandGroup.addCommands(new SwerveSampleMoveCommand(s_drive, 1, 0, 0, true, new Pose2d(), 0.05));
+
+        /*
         //Z shape
         //move left
         commandGroup.addCommands(new SwerveSampleMoveCommand(s_drive, 0, -1, 0, true, new Pose2d(), 0.05));
@@ -41,7 +44,7 @@ public class AutonController {
         //move left
         commandGroup.addCommands(new SwerveSampleMoveCommand(s_drive, 0, 1, 0, true, new Pose2d(), 0.05));
 
-
+*/
         return commandGroup;
     }
 
